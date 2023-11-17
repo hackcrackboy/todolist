@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "timcare_backend": {
+      "main": "src/timcare_backend/main.mo",
+      "type": "motoko"
+    },
+    "timcare_frontend": {
+      "dependencies": [
+        "timcare_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/timcare_frontend/src/index.html"
+      },
+      "source": [
+        "src/timcare_frontend/assets",
+        "dist/timcare_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
